@@ -44,8 +44,7 @@ check_and_move_f "./starship.toml" "$HOME/.config/starship.toml"
 check_and_move_f "./.zshrc" "$HOME/.zshrc"
 check_and_move_d "./.config/hypr" "$HOME/.config/hypr"
 
-
-
+#  sudo pacman -S extra/flameshot  
 
 
 # Source the updated .zshrc file
