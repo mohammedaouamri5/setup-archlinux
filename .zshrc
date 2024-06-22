@@ -1,15 +1,11 @@
-eval "$(zoxide init zsh)"                                                                                                   
-eval "$(starship init zsh)"
+
 
 
 
 # Path to your oh-my-zsh installation.
 ZSH="${HOME}/.oh-my-zsh"  
 
-# Path to powerlevel10k theme
 
-# List of plugins used
-# emoji-clock 
 
 plugins=(
     vscode 
@@ -27,7 +23,6 @@ plugins=(
     git-flow-avh 
     git-hubflow 
     git-lfs 
-    git-prompt 
     gitfast 
     github 
     gitignore
@@ -40,7 +35,6 @@ plugins=(
     timer
     )
 source $ZSH/oh-my-zsh.sh
-# source  "$ZSH/themes/monokai.zsh-theme"
 
 # In case a command is not found, try to find the package that has it
 function command_not_found_handler {
@@ -93,6 +87,7 @@ function in {
 
 # Helpful aliases
 alias  c='clear' # clear terminal
+alias  cls='clear' # clear terminal
 alias  l='eza -lh  --icons=auto' # long list
 alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
@@ -102,19 +97,12 @@ alias la='eza -lha --icons=auto --group-directories-first' # list all
 # Handy change dir shortcuts
 alias ..='cd ..'
 alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
 alias DEV='cd ~/DEV'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#Display Pokemon
-# pokemon-colorscripts --no-title -r 1,3,6
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -145,7 +133,6 @@ zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
 ### END ###
 
 
-
 # source  "$ZSH/themes/sporty_256.zsh-theme"
 conda deactivate
 
@@ -160,18 +147,14 @@ alias runpyvenv="source ./.venv/bin/activate"
 
 
 
-
- 
-
 alias za='zoxide add'
-
 alias zq='zoxide query'
 alias zr='zoxide remove'
 
 
 
 # from know thows are my aliases
-alias z='cd $(zoxide query -i)'
+alias zz='z $(zoxide query -i)'
 alias zfzf='cd $(zoxide query -i) && fzf'
 alias fgit='git branch | fzf'
 alias fgit='git ' checkout="checkout \$(git branch | fzf) "
@@ -180,8 +163,22 @@ alias clone='cd ~/clone'
 alias mkcd='mkdir $1 && cd $1'
 
 
+
+# cd(){
+#     z "$1"
+#     za 
+# }
+
+
 function mkdirg ()
 {
 	mkdir -p "$1"
 	cd "$1"
 }
+
+
+
+
+
+eval "$(zoxide init zsh)"                                                                                                   
+eval "$(starship init zsh)"

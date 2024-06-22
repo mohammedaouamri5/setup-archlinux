@@ -1,0 +1,89 @@
+{
+    "workbench.colorTheme": "Monokai Night",
+    "workbench.iconTheme": "vscode-icons",
+    "files.autoSave": "afterDelay",
+    "tabnine.experimentalAutoImports": true,
+    "code-runner.runInTerminal": true,
+    "cmake.configureOnOpen": true,
+    "[cpp]": {
+      "editor.wordBasedSuggestions": "matchingDocuments",
+      "editor.suggest.insertMode": "replace",
+      "editor.semanticHighlighting.enabled": true,
+      "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "editor.fontLigatures": true,
+    "code-runner.languageIdToFileExtensionMap": {
+      "bat": ".bat",
+      "powershell": ".ps1",
+      "typescript": ".ts"
+    },
+    "code-runner.customCommand": "debug",
+    "cmake.showOptionsMovedNotification": false,
+    "[octave]": {
+      "editor.defaultFormatter": "tusindfryd.octave-formatter"
+    },
+    // "editor.codeLensFontFamily": "FiraCode Nerd Font",
+    "editor.inlayHints.fontFamily": "FiraCode Nerd Font",
+    "markdown.preview.fontFamily": "FiraCode Nerd Font",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.exclude": {
+      "**/.trunk/*actions/": true,
+      "**/.trunk/*logs/": true,
+      "**/.trunk/*notifications/": true,
+      "**/.trunk/*out/": true,
+      "**/.trunk/*plugins/": true
+    },
+    "files.watcherExclude": {
+      "**/.trunk/*actions/": true,
+      "**/.trunk/*logs/": true,
+      "**/.trunk/*notifications/": true,
+      "**/.trunk/*out/": true,
+      "**/.trunk/*plugins/": true
+    },
+    "trunk.showPreexistingIssues": false,
+    "editor.stickyScroll.enabled": true,
+    "remote.downloadExtensionsLocally": true,
+    "extensions.autoUpdate": true,
+    "extensions.autoCheckUpdates": true,
+    "window.restoreWindows": "none",
+    "remote.SSH.lockfilesInTmp": true,
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "remote.SSH.connectTimeout": 300,
+    "editor.codeActionsOnSave": {},
+    "editor.fontSize": 18,
+    "workbench.editor.showTabs": "none",
+    "workbench.activityBar.location": "top",
+    "window.customTitleBarVisibility": "auto",
+    "workbench.editor.editorActionsLocation": "hidden",
+    "window.menuBarVisibility": "toggle",
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "hediet.vscode-drawio.resizeImages": null,
+    "workbench.sideBar.location": "right",
+    "settingsSync.ignoredSettings": [
+      "editor.fontFamily"
+    ],
+    "workbench.statusBar.visible": false,
+    "workbench.colorCustomizations": {},
+    "explorer.fileNesting.patterns": {
+      "Cargo.toml": "Cargo.lock",
+      "*.sqlite": "${capture}.${extname}-*",
+      "*.db": "${capture}.${extname}-*",
+      "*.sqlite3": "${capture}.${extname}-*",
+      "*.db3": "${capture}.${extname}-*",
+      "*.sdb": "${capture}.${extname}-*",
+      "*.s3db": "${capture}.${extname}-*"
+    },
+    "editor.fontFamily": "'FiraCode Nerd Font', 'FiraCode Nerd Font', FiraCode Nerd Font",
+    "editor.fontVariations": true
+  }
