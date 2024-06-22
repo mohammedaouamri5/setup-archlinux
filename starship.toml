@@ -1,0 +1,202 @@
+#                                        
+
+right_format = """
+[](#f92672)\
+$time\
+[](fg:#f92672)\
+"""
+
+
+
+# [\n](fg:#f92672)
+format = """
+$status\
+[╭](#f92672)\
+$python\
+$username\
+[](bg:#a6e22e fg:#f92672)\
+$directory\
+[](fg:#a6e22e bg:#66d9ef)\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+[](fg:#66d9ef bg:#fd971f00)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$conda\
+[](fg:#ae81ff bg:#ae81ff00)\
+[](fg:#ae81ff bg:#ae81ff)\
+$docker_context\
+[](fg:#ae81ff bg:#33658A)\
+[](#33658A)\
+[\n╰&](fg:#f92672)\
+"""
+# [\n╰&](fg:#f92672)\
+# [\n╰──  ](fg:#f92672)\
+
+# format= """
+# WOOOW
+# """
+command_timeout = 5000
+
+
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+[fill]
+symbol = ' '
+style = 'bold green'
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bg:#f92672"
+style_root = "bg:#f92672"
+format = '[   ]($style)'
+
+[conda]
+format = '[$symbol$environment](dimmed green) '
+
+[directory]
+style = "bg:#a6e22e fg:#000000"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "󱔗"
+"Downloads" = " "
+".git" = ""
+"node_modules" = ""
+"Music" = " "
+"Pictures" = " "
+
+
+[c]
+symbol = " "
+style = "bg:#fd971f00 fg:#0000ff"
+format = '[ $symbol ($version) ]($style)'
+detect_folders = ['Vendor' , 'vendor']
+detect_extensions = ['c', 'h' , 'hpp' , 'cpp']
+
+
+[docker_context]
+symbol = " "
+style = "bg:#ae81ff"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#fd971f00"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#fd971f00"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#66d9ef fg:#3b3b3b"
+format = '[ $symbol $branch ]($style)'
+
+# format = '[ $conflicted$up_to_date$untracked$stashed ]($style)'
+# style = "bg:#66d9ef fg:#3b3b3b"
+# format = '[ $all ]($style)'
+# conflicted = '🏳'
+# up_to_date = '✓'
+# untracked = '🤷'
+# stashed = '📦'
+# modified = '📝'
+# staged = '[++\($count\)](green)'
+# renamed = '👅'
+# deleted = '🗑'
+# ahead = '⇡${count}'
+# diverged = '⇕⇡$ahead_count⇣$behind_count'
+# behind = '⇣${count}'
+
+
+[git_status]
+style = "bg:#66d9ef fg:#3b3b3b"
+format = '[$all_status$ahead_behind]($style)'
+ahead="⇡"   #	Displays ahead, behind or up_to_date format string based on the current status of the repo.
+behind="⇣"   #	Displays diverged, ahead, behind or up_to_date format string based on the current status of the repo.
+conflicted="[](bold red)"   #	Displays conflicted when this branch has merge conflicts.
+untracked='🤷'   #	Displays untracked when there are untracked files in the working directory.
+stashed="+"   #	Displays stashed when a stash exists for the local repository.
+modified="•(white)"   #	Displays modified when there are file modifications in the working directory.
+staged='[++\($count\)](green)'   #	Displays staged when a new file has been added to the staging area.
+renamed="󰑕"   #	Displays renamed when a renamed file has been added to the staging area.
+deleted="󰗨"   #	Displays deleted when a file's deletion has been added to the staging area.
+
+
+
+
+
+
+[golang]
+symbol = " "
+style = "bg:#fd971f00"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#fd971f00"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#fd971f00"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#fd971f00"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#fd971f00"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#fd971f00"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+style = "bg:#f92672"
+format = '[(\($virtualenv\) )]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#fd971f00 fg:#ff0000"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#f92672"
+format = '[$time ⏲ ]($style)' 
+
+
+[cmd_duration]
+min_time = 5000
+show_notifications = true 
+style = "fg:blue bg:000000"
+format = "[ TOOK $duration ⏲ ]($style)"
+
+
