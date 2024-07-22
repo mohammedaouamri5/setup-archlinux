@@ -163,11 +163,15 @@ alias clone='cd ~/clone'
 alias mkcd='mkdir $1 && cd $1'
 
 
+export PATH=$PATH:$HOME/bin/Vscode/bin
 
-# cd(){
-#     z "$1"
-#     za 
-# }
+
+
+cd(){
+    z "$1"
+    za 
+}
+
 
 
 function mkdirg ()
@@ -177,8 +181,20 @@ function mkdirg ()
 }
 
 
+function fzfon() {
+	z "$1"
+    fzf
+}
+
 
 
 
 eval "$(zoxide init zsh)"                                                                                                   
 eval "$(starship init zsh)"
+
+
+
+
+
+
+clear && fastfetch
