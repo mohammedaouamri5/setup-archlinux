@@ -164,12 +164,13 @@ alias mkcd='mkdir $1 && cd $1'
 
 
 export PATH=$PATH:$HOME/bin/Vscode/bin
-
+export SCRIPTS="$HOME/scripts" 
+export PATH=$PATH:$SCRIPTS
 
 
 cd(){
     z "$1"
-    za 
+    za  . 
 }
 
 
