@@ -186,15 +186,24 @@ symbol = ""
 style = "bg:#fd971f00 fg:#ff0000"
 format = '[ $symbol ($version) ]($style)'
 
+
+
+[custom.time_icon]
+command = "/home/mohammedaouamri/.scripts/TimeIcon"
+when = "true"
+format = "[$output]($style)"
+style = "bg:#f92672"
+
+
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#f92672"
-format = '[$time  ]($style)' 
+format = '[$time]($style)'
+
 
 
 [cmd_duration]
-min_time = 5000
 show_notifications = true 
 style = "fg:blue bg:000000"
 format = "[ TOOK $duration   ]($style)"
