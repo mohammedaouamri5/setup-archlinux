@@ -33,7 +33,7 @@ $julia\
 $nodejs\
 $nim\
 $rust\
-$conda\
+$conda\  
 [](fg:#ae81ff bg:#ae81ff00)\
 [](fg:#ae81ff bg:#ae81ff)\
 $docker_context\
@@ -119,27 +119,28 @@ format = '[ $symbol $branch ]($style)'
 # up_to_date = '✓'
 # untracked = '🤷'
 # stashed = '📦'
-# modified = '📝'
+# modified = ''
 # staged = '[++\($count\)](green)'
-# renamed = '👅'
-# deleted = '🗑'
+# renamed = '󰑕'
+# deleted = '󰛌'
 # ahead = '⇡${count}'
 # diverged = '⇕⇡$ahead_count⇣$behind_count'
 # behind = '⇣${count}'
 
 
 [git_status]
-style = "bg:#66d9ef fg:#3b3b3b"
+style = "bg:#66d9ef fg:#66d9ef3b3b3b"
 format = '[$all_status$ahead_behind]($style)'
-ahead="⇡"   #	Displays ahead, behind or up_to_date format string based on the current status of the repo.
-behind="⇣"   #	Displays diverged, ahead, behind or up_to_date format string based on the current status of the repo.
 conflicted="[](bold red)"   #	Displays conflicted when this branch has merge conflicts.
-untracked='🤷'   #	Displays untracked when there are untracked files in the working directory.
+untracked='󱃟'   #	Displays untracked when there are untracked files in the working directory.
 stashed="+"   #	Displays stashed when a stash exists for the local repository.
 modified="•(white)"   #	Displays modified when there are file modifications in the working directory.
-staged='[++\($count\)](green)'   #	Displays staged when a new file has been added to the staging area.
+staged='[++\($count\)]($style)'   #	Displays staged when a new file has been added to the staging area.
 renamed="󰑕"   #	Displays renamed when a renamed file has been added to the staging area.
 deleted="󰗨"   #	Displays deleted when a file's deletion has been added to the staging area.
+ahead = '⇡${count}'
+diverged = '⇕⇡$ahead_count⇣$behind_count'
+behind = '⇣${count}'
 
 
 

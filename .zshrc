@@ -1,13 +1,15 @@
-
-
-
-
 # Path to your oh-my-zsh installation.
-ZSH="${HOME}/.oh-my-zsh"  
+ZSH=/usr/share/oh-my-zsh/
 
+# Path to powerlevel10k theme
 
+# List of plugins used
+plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting 
+ sudo
+ zsh-256color
+ zsh-autosuggestions 
+ zsh-syntax-highlighting 
 
-plugins=(
     vscode 
     zoxide 
     battery 
@@ -26,6 +28,7 @@ plugins=(
     gitfast 
     github 
     gitignore
+    golang
     history
     npm 
     nvm
@@ -33,7 +36,8 @@ plugins=(
     redis-cli
     themes
     timer
-    )
+
+ )
 source $ZSH/oh-my-zsh.sh
 
 # In case a command is not found, try to find the package that has it
@@ -87,37 +91,37 @@ function in {
 
 # Helpful aliases
 alias  c='clear' # clear terminal
-alias  cls='clear' # clear terminal
 alias  l='eza -lh  --icons=auto' # long list
+alias  cls='clear' # clear terminal
 alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias lt='eza --icons=auto --tree' # list folder as tree
 alias la='eza -lha --icons=auto --group-directories-first' # list all
+alias un='$aurhelper -Rns' # uninstall package
+alias up='$aurhelper -Syu' # update system/package/aur
+alias pl='$aurhelper -Qs' # list installed package
+alias pa='$aurhelper -Ss' # list availabe package
+alias pc='$aurhelper -Sc' # remove unused cache
+alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
+alias vc='code' # gui code editor
+
 # Handy change dir shortcuts
 alias ..='cd ..'
 alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
 alias DEV='cd ~/DEV'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
 
+# python alias 
+alias mkpyvenv="python3 -m venv .venv  "
+alias runpyvenv="source ./.venv/bin/activate"
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mohammedaouamri/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mohammedaouamri/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mohammedaouamri/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/mohammedaouamri/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 
 ### ZNT's installer added snippet ###
@@ -132,25 +136,18 @@ setopt AUTO_PUSHD HIST_IGNORE_DUPS PUSHD_IGNORE_DUPS
 zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
 ### END ###
 
+ 
 
-# source  "$ZSH/themes/sporty_256.zsh-theme"
-conda deactivate
+eval "$(zoxide init zsh)"                                                                                                   
+eval "$(starship init zsh)"
 
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+ 
 
-
-
-
-
-alias mkpyvenv="python3 -m venv .venv  "
-alias runpyvenv="source ./.venv/bin/activate"
-
-
-
-
+# zoxide alias 
 alias za='zoxide add'
 alias zq='zoxide query'
 alias zr='zoxide remove'
-
 
 
 # from know thows are my aliases
@@ -159,39 +156,14 @@ alias zfzf='cd $(zoxide query -i) && fzf'
 alias fgit='git branch | fzf'
 alias fgit='git ' checkout="checkout \$(git branch | fzf) "
 
-alias clone='cd ~/clone'
-alias mkcd='mkdir $1 && cd $1'
 
+alias clone='cd ~/clone' 
 
-export PATH=$PATH:$HOME/bin/Vscode/bin
+export PATH=$PATH
 export SCRIPTS="$HOME/.scripts" 
 export PATH=$PATH:$SCRIPTS
 export PATH=$PATH:"$(go env GOPATH)/bin"
-
-cd(){
-    z "$1"
-    za  . 
-}
-
-
-
-function mkdirg ()
-{
-	mkdir -p "$1"
-	cd "$1"
-}
-
-
-function fzfon() {
-	z "$1"
-    fzf
-}
-
-
-
-
-eval "$(zoxide init zsh)"                                                                                                   
-eval "$(starship init zsh)"
+export EDITOR=nvim
 
 
 
@@ -199,3 +171,52 @@ eval "$(starship init zsh)"
 
 
 clear && fastfetch
+
+# Handy change dir function 
+cd(){
+    z "$1"
+    za  . 
+}
+
+function mkdirg ()
+{
+	mkdir -p "$1"
+	cd "$1"
+}
+
+function fzfon() {
+	z "$1"
+    fzf
+}
+
+function cdf() {
+
+    BRUH=${1:-$(".")}
+    cd $(find $BRUH -type d | fzf --preview ' basename {} && [[ -d {} ]] && eza -l --color=always --icons {}'  )
+
+}
+
+function dfzf() {
+    BRUH=${1:-$(".")}
+    find $BRUH -type d | fzf --preview ' basename {} && [[ -d {} ]] && eza -l --color=always --icons {}'  
+}
+
+
+ 
+export PATH=$HOME/.local/bin:$PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/mohammedaouamri/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/mohammedaouamri/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mohammedaouamri/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/mohammedaouamri/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+conda deactivate              
