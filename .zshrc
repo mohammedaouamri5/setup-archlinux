@@ -189,17 +189,21 @@ function fzfon() {
     fzf
 }
 
-function cdf() {
 
-    BRUH=${1:-$(".")}
-    cd $(find $BRUH -type d | fzf --preview ' basename {} && [[ -d {} ]] && eza -l --color=always --icons {}'  )
-
-}
 
 function dfzf() {
     BRUH=${1:-$(".")}
     find $BRUH -type d | fzf --preview ' basename {} && [[ -d {} ]] && eza -l --color=always --icons {}'  
 }
+
+function fd() {
+    BRUH=${1:-$(".")}
+    cd $(dfzf $BRUH)
+
+}
+
+
+
 
 
  
