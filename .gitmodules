@@ -1,0 +1,3 @@
+[submodule "hypr"]
+	path = hypr
+	url = git@github.com:mohammedaouamri5/hypr.git
