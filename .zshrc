@@ -4,12 +4,18 @@ ZSH=/usr/share/oh-my-zsh/
 # Path to powerlevel10k theme
 
 # List of plugins used
-plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting 
- sudo
- zsh-256color
- zsh-autosuggestions 
- zsh-syntax-highlighting 
-
+plugins=(
+    you-should-use
+    git 
+    sudo 
+    zsh-256color 
+    zsh-default-behavior
+    zsh-autosuggestions 
+    zsh-syntax-highlighting 
+    sudo
+    zsh-256color
+    zsh-autosuggestions 
+    zsh-syntax-highlighting 
     vscode 
     zoxide 
     battery 
@@ -36,7 +42,6 @@ plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting
     redis-cli
     themes
     timer
-
  )
 source $ZSH/oh-my-zsh.sh
 
@@ -138,7 +143,7 @@ zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
 
  
 
-eval "$(zoxide init zsh)"                                                                                                   
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
@@ -203,8 +208,16 @@ function fd() {
 }
 
 
+function JDM() {
+    BRUH=${3:-$(pwd)}
+    curl -X POST http://localhost:8080/download \
+    -H "Content-Type: application/json" \
+    -d '{"Name": "$1", "Path": "$3", "Url": "$2"}'
+}
 
-
+if [ $(date +"%Y") -eq 2025 ]; then
+    cowsay "Go get Ghostty terminal"
+fi
 
  
 export PATH=$HOME/.local/bin:$PATH
@@ -224,3 +237,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda deactivate              
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
