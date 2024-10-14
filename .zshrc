@@ -4,7 +4,7 @@ ZSH=/usr/share/oh-my-zsh/
 # Path to powerlevel10k theme
 
 # List of plugins used
-plugins=(
+plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting  
     you-should-use
     git 
     sudo 
@@ -168,6 +168,7 @@ export PATH=$PATH
 export SCRIPTS="$HOME/.scripts" 
 export PATH=$PATH:$SCRIPTS
 export PATH=$PATH:"$(go env GOPATH)/bin"
+export PATH=$PATH:"$HOME/.cargo/bin"
 export EDITOR=nvim
 
 
@@ -221,22 +222,24 @@ fi
 
  
 export PATH=$HOME/.local/bin:$PATH
+for dir in ~/.pyenv/versions/*/bin; do export PATH="$PATH:$dir" ; done
+
 
 # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mohammedaouamri/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mohammedaouamri/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mohammedaouamri/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/mohammedaouamri/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-conda deactivate              
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/mohammedaouamri/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/mohammedaouamri/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/mohammedaouamri/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/mohammedaouamri/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
+# conda deactivate              
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
