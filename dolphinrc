@@ -1,0 +1,54 @@
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+
+[DetailsMode]
+PreviewSize=16
+
+[FoldersPanel]
+HiddenFilesShown=true
+
+[General]
+AutoExpandFolders=true
+BrowseThroughArchives=true
+GlobalViewProps=false
+ModifiedStartupSettings=true
+ShowSelectionToggle=false
+Version=202
+ViewPropsTimestamp=2024,10,12,21,25,20.09
+
+[IconsMode]
+IconSize=80
+MaximumTextLines=1
+PreviewSize=112
+TextWidthIndex=0
+
+[InformationPanel]
+dateFormat=ShortFormat
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=48
+
+[KPropertiesDialog]
+2560x1080 screen: Window-Maximized=true
+
+[MainWindow]
+ToolBarsMovable=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[PlacesPanel]
+IconSize=48
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,ffmpegthumbs
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[UiSettings]
+ColorScheme=KvCurves3d1
+
+[ViewPropertiesDialog]
+1920x1080 screen: Window-Maximized=true
