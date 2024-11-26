@@ -4,16 +4,13 @@ ZSH=/usr/share/oh-my-zsh/
 # Path to powerlevel10k theme
 
 # List of plugins used
-plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting  
-    you-should-use
+plugins=( 
     git 
     sudo 
     zsh-256color 
-    zsh-default-behavior
     zsh-autosuggestions 
-    zsh-syntax-highlighting 
-    sudo
-    zsh-256color
+    # you-should-use
+    # zsh-default-behavior
     zsh-autosuggestions 
     zsh-syntax-highlighting 
     vscode 
@@ -22,7 +19,6 @@ plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting
     emoji 
     cp 
     extract
-    git 
     git-auto-fetch
     git-commit 
     git-escape-magic 
@@ -41,7 +37,7 @@ plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting
     postgres
     redis-cli
     themes
-    timer
+    # timer
  )
 source $ZSH/oh-my-zsh.sh
 
@@ -245,4 +241,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+cowsay $(ajoke)  
 
+
+alias nv='nvim'
+alias clear='clear && cowsay $(ajoke) '
