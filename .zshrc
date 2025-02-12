@@ -173,12 +173,21 @@ export EDITOR=nvim
 
 
 clear && fastfetch
+cowsay $(ajoke)  
+
 
 # Handy change dir function 
 cd(){
     z "$1"
     za  . 
 }
+
+
+
+
+
+
+
 
 function mkdirg ()
 {
@@ -212,9 +221,6 @@ function JDM() {
     -d '{"Name": "$1", "Path": "$3", "Url": "$2"}'
 }
 
-if [ $(date +"%Y") -eq 2025 ]; then
-    cowsay "Go get Ghostty terminal"
-fi
 
  
 export PATH=$HOME/.local/bin:$PATH
@@ -241,7 +247,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-cowsay $(ajoke)  
+
 
 
 alias nv='nvim'
