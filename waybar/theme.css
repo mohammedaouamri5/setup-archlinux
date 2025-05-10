@@ -1,0 +1,12 @@
+@define-color bar-bg rgba(0, 0, 0, 0);
+
+@import "wallust/colors-waybar.css"; 
+
+/* TODO : FIX This Shiiiiiiit*/
+
+@define-color main-bg   @color2;
+@define-color main-fg   @color8;
+@define-color wb-act-bg @color9;
+@define-color wb-act-fg @color7;
+@define-color wb-hvr-bg @color6;
+@define-color wb-hvr-fg @color8;

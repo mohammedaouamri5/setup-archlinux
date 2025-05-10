@@ -1,6 +1,0 @@
-[submodule "hypr"]
-	path = hypr
-	url = git@github.com:mohammedaouamri5/hypr.git
-[submodule ".scripts"]
-	path = .scripts
-	url = git@github.com:mohammedaouamri5/.scripts.git

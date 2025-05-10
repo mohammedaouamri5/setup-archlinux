@@ -1,3 +1,16 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+wallust run ~/.THE-WALLPAPER
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
@@ -142,7 +155,7 @@ zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+# POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
  
 
 # zoxide alias 
@@ -250,5 +263,15 @@ export NVM_DIR="$HOME/.nvm"
 
 
 
-alias nv='nvim'
+alias nv="nvim ."
 alias clear='clear && cowsay $(ajoke) '
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+function acp(){git add . ; git commit -m  $1 ;  git push }
+
+
