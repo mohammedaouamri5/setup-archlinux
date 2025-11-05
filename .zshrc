@@ -1,20 +1,28 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="arrow"
+
+
+
+
+#  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#  fi
+
+
 
 wallust run ~/.THE-WALLPAPER
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 
-# Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
 
-# Path to powerlevel10k theme
 
 # List of plugins used
 plugins=( 
@@ -112,6 +120,17 @@ alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long li
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias lt='eza --icons=auto --tree' # list folder as tree
 alias la='eza -lha --icons=auto --group-directories-first' # list all
+
+
+
+alias gls='eza -1   --icons=auto | grep ' # short list
+alias gll='eza -lha --icons=auto --sort=name --group-directories-first | grep ' # long list all
+alias gld='eza -lhD --icons=auto | grep ' # long list dirs
+alias glt='eza --icons=auto --tree | grep ' # list folder as tree
+alias gla='eza -lha --icons=auto --group-directories-first | grep ' # list all
+
+
+
 alias un='$aurhelper -Rns' # uninstall package
 alias up='$aurhelper -Syu' # update system/package/aur
 alias pl='$aurhelper -Qs' # list installed package
@@ -153,7 +172,7 @@ zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
  
 
 eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
+eval "$(starship  init zsh)"
 
 # POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
  
@@ -178,8 +197,17 @@ export SCRIPTS="$HOME/.scripts"
 export PATH=$PATH:$SCRIPTS
 export PATH=$PATH:"$(go env GOPATH)/bin"
 export PATH=$PATH:"$HOME/.cargo/bin"
+export PATH=$PATH:"$HOME/.local/lib"
 export EDITOR=nvim
 
+export XDG_DATA_DIRS="$HOME/.desktop:$XDG_DATA_DIRS"
+
+desktop_update() {
+    # Split XDG_DATA_DIRS by ":" into an array
+    for dir in ${(s/:/)XDG_DATA_DIRS}; do
+        update-desktop-database -q "$dir"
+    done
+}
 
 
 
@@ -195,24 +223,16 @@ cd(){
     za  . 
 }
 
-
-
-
-
-
-
-
 function mkdirg ()
 {
-	mkdir -p "$1"
-	cd "$1"
+        mkdir -p "$1"
+        cd "$1"
 }
 
 function fzfon() {
-	z "$1"
+        z "$1"
     fzf
 }
-
 
 
 function dfzf() {
@@ -240,21 +260,13 @@ export PATH=$HOME/.local/bin:$PATH
 for dir in ~/.pyenv/versions/*/bin; do export PATH="$PATH:$dir" ; done
 
 
-# >>> conda initialize >>>
-# # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/mohammedaouamri/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/mohammedaouamri/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/mohammedaouamri/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/mohammedaouamri/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# # <<< conda initialize <<<
-# conda deactivate              
+
+
+alias nv="nvim ."
+alias clear='clear && cowsay $(ajoke) '
+
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+function acp(){git add . ; git commit -m  $1 ;  git push }
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -263,15 +275,4 @@ export NVM_DIR="$HOME/.nvm"
 
 
 
-alias nv="nvim ."
-alias clear='clear && cowsay $(ajoke) '
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-function acp(){git add . ; git commit -m  $1 ;  git push }
-
-
+notify-send "Welcome back" "Have a nice day"
