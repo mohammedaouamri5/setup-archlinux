@@ -1,3 +1,6 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -18,8 +21,8 @@ ZSH_THEME="arrow"
 #  fi
 
 
+# wallust run ~/.THE-WALLPAPER
 
-wallust run ~/.THE-WALLPAPER
 
 
 
@@ -58,7 +61,7 @@ plugins=(
     postgres
     redis-cli
     themes
-    # timer
+    timer
  )
 source $ZSH/oh-my-zsh.sh
 
@@ -173,6 +176,7 @@ zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
 
 eval "$(zoxide init zsh)"
 eval "$(starship  init zsh)"
+eval "$(pyenv init - zsh)"
 
 # POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
  
@@ -189,6 +193,8 @@ alias zfzf='cd $(zoxide query -i) && fzf'
 alias fgit='git branch | fzf'
 alias fgit='git ' checkout="checkout \$(git branch | fzf) "
 
+
+alias fp=readpath 
 
 alias clone='cd ~/clone' 
 
@@ -213,7 +219,7 @@ desktop_update() {
 
 
 
-clear && fastfetch
+# clear && fastfetch
 cowsay $(ajoke)  
 
 
@@ -243,7 +249,6 @@ function dfzf() {
 function fd() {
     BRUH=${1:-$(".")}
     cd $(dfzf $BRUH)
-
 }
 
 
@@ -253,7 +258,6 @@ function JDM() {
     -H "Content-Type: application/json" \
     -d '{"Name": "$1", "Path": "$3", "Url": "$2"}'
 }
-
 
  
 export PATH=$HOME/.local/bin:$PATH
@@ -276,3 +280,6 @@ export NVM_DIR="$HOME/.nvm"
 
 
 notify-send "Welcome back" "Have a nice day"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
