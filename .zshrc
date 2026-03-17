@@ -260,6 +260,39 @@ function JDM() {
 }
 
  
+# Copy file(s) to clipboard and store in history
+f-copy() {
+  if [[ $# -eq 0 ]]; then
+    echo "Usage: f-copy <file1> [file2 ...]"
+    return 1
+  fi
+
+  local uris=()
+  for file in "$@"; do
+    if [[ -e "$file" ]]; then
+      uris+=("file://$(realpath "$file")")
+    else
+      echo "f-copy: '$file' does not exist"
+      return 1
+    fi
+  done
+
+  printf "%s\n" "${uris[@]}" | wl-copy --type text/uri-list
+}
+
+# Pick from clipboard history using fzf
+f-paste() {
+  cliphist list \
+    | fzf --prompt="Clipboard ❯ " \
+          --preview='echo {} | cliphist decode' \
+          --preview-window=down:3:wrap \
+    | cliphist decode \
+    | wl-copy
+}
+
+
+
+
 export PATH=$HOME/.local/bin:$PATH
 for dir in ~/.pyenv/versions/*/bin; do export PATH="$PATH:$dir" ; done
 
@@ -283,3 +316,11 @@ notify-send "Welcome back" "Have a nice day"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/home/mohammedaouamri/.lmstudio/bin"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/mohammedaouamri/HDD-2/.lmstudio/bin"
+# End of LM Studio CLI section
+
