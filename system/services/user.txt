@@ -1,0 +1,2 @@
+# User units (installed through the dotfiles in config/.config/systemd/user/).
+aria2.service

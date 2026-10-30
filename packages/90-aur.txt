@@ -1,0 +1,61 @@
+# AUR packages. Order matters: the illogical-impulse metapackages come first
+# because everything else in the desktop expects them to be present.
+#
+# The AUR helper itself is bootstrapped by install.sh as `paru-bin`
+# (a source build of `paru` would need a full Rust toolchain).
+illogical-impulse-basic
+illogical-impulse-audio
+illogical-impulse-backlight
+illogical-impulse-fonts-themes
+illogical-impulse-hyprland
+illogical-impulse-kde
+illogical-impulse-portal
+illogical-impulse-python
+illogical-impulse-toolkit
+illogical-impulse-widgets
+illogical-impulse-screencapture
+illogical-impulse-quickshell-git
+illogical-impulse-bibata-modern-classic-bin
+illogical-impulse-microtex-git
+illogical-updots
+
+# Desktop extras
+grimblast-git
+hyprshade
+kwin-polonium
+plasma-x11-session
+wacomtablet
+
+# Applications
+beekeeper-studio-appimage
+brave-nightly-bin
+bruno-bin
+cnrdrvcups-lb-bin
+gitkraken
+gpt4all-chat
+k6
+kgamma
+lmstudio-bin
+localsend-bin
+mongodb-bin
+neofetch
+pachtop
+packettracer
+pdfcpu-bin
+protonup-qt
+simulide
+upscayl-bin
+visual-studio-code-bin
+yaak-appimage
+yay-bin
+
+# System utilities
+archarchive
+debtap
+downgrade
+ntfsfixboot
+weka
+xboxdrv
+
+# AUR helper (already provided by the bootstrap step)
+paru-bin

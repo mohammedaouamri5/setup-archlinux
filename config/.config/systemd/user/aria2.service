@@ -1,0 +1,10 @@
+[Unit]
+Description=aria2 Download Manager
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/aria2c --conf-path=%h/.config/aria2/aria2.conf
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

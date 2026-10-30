@@ -1,0 +1,30 @@
+# Core system: already present on a base Arch install, kept for explicit restore.
+# Installed with `--needed`, so this file is a no-op on an existing system.
+amd-ucode
+base
+base-devel
+bat
+chafa
+cowsay
+cpio
+fastfetch
+fzf
+git
+grub
+inotify-tools
+less
+libisoburn
+limine
+linux
+linux-firmware
+linux-lts
+lshw
+mandoc
+mtools
+openssh
+terminus-font
+tree
+unrar
+zoxide
+zram-generator
+zsh

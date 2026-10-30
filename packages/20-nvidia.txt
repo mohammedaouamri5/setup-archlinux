@@ -1,0 +1,23 @@
+# NVIDIA RTX 3060: open kernel modules, CUDA container support, Vulkan stack.
+# Installed on non-NVIDIA machines? Remove this file from the run with
+#   ./install.sh --stage packages --skip-group 20-nvidia
+nvidia-container-toolkit
+nvidia-open
+nvidia-open-lts
+nvidia-settings
+nvidia-utils
+
+# Vulkan / OpenGL
+lib32-vulkan-intel
+spirv-headers
+virtualgl
+volk
+vulkan-extra-layers
+vulkan-extra-tools
+vulkan-headers
+vulkan-html-docs
+vulkan-intel
+vulkan-nouveau
+vulkan-tools
+vulkan-utility-libraries
+vulkan-validation-layers

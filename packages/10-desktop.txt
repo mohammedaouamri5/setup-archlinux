@@ -1,0 +1,46 @@
+# Wayland desktop plumbing: audio, bluetooth, theming, printing, screenshot tools.
+# The Hyprland / Quickshell stack itself comes from the illogical-impulse-* AUR
+# metapackages in 90-aur.txt (they pull hyprland, kitty, cliphist, fuzzel, ...).
+bluez-utils
+breeze-cursors
+breeze-gtk
+breeze-plymouth
+btop
+cups
+cups-filters
+dnsmasq
+dunst
+espeak-ng
+evtest
+flameshot
+flatpak
+flatpak-kcm
+gst-plugin-pipewire
+icewm
+libpulse
+linssid
+mission-center
+noto-fonts-cjk
+noto-fonts-emoji
+nwg-displays
+oxygen
+oxygen-cursors
+oxygen-sounds
+pipewire
+pipewire-alsa
+pipewire-jack
+plymouth-kcm
+power-profiles-daemon
+powertop
+qrca
+rofi
+satty
+sddm
+spectacle
+thunar
+ttf-jetbrains-mono
+wavemon
+wev
+
+# WebKit runtime used by some GUI apps (Obsidian/zed/kitty integration)
+webkitgtk-6.0

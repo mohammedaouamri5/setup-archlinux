@@ -1,0 +1,13 @@
+# System units enabled on this machine (see install.sh, stage "system").
+# Anything Arch enables by default is not listed here.
+NetworkManager.service
+bluetooth.service
+cups.service
+docker.service
+fstrim.timer
+ollama.service
+power-profiles-daemon.service
+sddm.service
+sshd.service
+systemd-timesyncd.service
+tailscaled.service

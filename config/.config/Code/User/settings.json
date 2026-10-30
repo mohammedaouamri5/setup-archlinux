@@ -1,0 +1,102 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vscode-icons",
+    "files.autoSave": "afterDelay",
+    "tabnine.experimentalAutoImports": true,
+    "code-runner.runInTerminal": true,
+    "cmake.configureOnOpen": true,
+    "[cpp]": {
+      "editor.wordBasedSuggestions": "matchingDocuments",
+      "editor.suggest.insertMode": "replace",
+      "editor.semanticHighlighting.enabled": true,
+      "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "code-runner.languageIdToFileExtensionMap": {
+      "bat": ".bat",
+      "powershell": ".ps1",
+      "typescript": ".ts"
+    },
+    "code-runner.customCommand": "debug",
+    "cmake.showOptionsMovedNotification": false,
+    "[octave]": {
+      "editor.defaultFormatter": "tusindfryd.octave-formatter"
+    },
+    // "editor.codeLensFontFamily": "FiraCode Nerd Font",
+    "editor.inlayHints.fontFamily": "FiraCode Nerd Font",
+    "markdown.preview.fontFamily": "FiraCode Nerd Font",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.exclude": {
+      "**/.trunk/*actions/": true,
+      "**/.trunk/*logs/": true,
+      "**/.trunk/*notifications/": true,
+      "**/.trunk/*out/": true,
+      "**/.trunk/*plugins/": true
+    },
+    "files.watcherExclude": {
+      "**/.trunk/*actions/": true,
+      "**/.trunk/*logs/": true,
+      "**/.trunk/*notifications/": true,
+      "**/.trunk/*out/": true,
+      "**/.trunk/*plugins/": true
+    },
+    "trunk.showPreexistingIssues": false,
+    "editor.stickyScroll.enabled": true,
+    "remote.downloadExtensionsLocally": true,
+    "extensions.autoUpdate": true,
+    "extensions.autoCheckUpdates": true,
+    "window.restoreWindows": "none",
+    "remote.SSH.lockfilesInTmp": true,
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "remote.SSH.connectTimeout": 300,
+    "editor.codeActionsOnSave": {
+
+    
+    },
+    "editor.fontSize": 18,
+    "workbench.activityBar.location": "top",
+    "window.customTitleBarVisibility": "auto",
+    "hediet.vscode-drawio.resizeImages": null,
+    "workbench.sideBar.location": "right",
+    "settingsSync.ignoredSettings": [
+      "editor.fontFamily"
+    ],
+    "workbench.colorCustomizations": {},
+    "explorer.fileNesting.patterns": {
+      "Cargo.toml": "Cargo.lock",
+      "*.sqlite": "${capture}.${extname}-*",
+      "*.db": "${capture}.${extname}-*",
+      "*.sqlite3": "${capture}.${extname}-*",
+      "*.db3": "${capture}.${extname}-*",
+      "*.sdb": "${capture}.${extname}-*",
+      "*.s3db": "${capture}.${extname}-*"
+    },
+    "editor.fontVariations": true,
+    "cmake.pinnedCommands": [
+      "workbench.action.tasks.configureTaskRunner",
+      "workbench.action.tasks.runTask"
+    ],
+    "database-client.autoSync": true,
+    "redhat.telemetry.enabled": true
+  ,
+  "material-code.primaryColor": "#B94641",
+  "workbench.experimental.share.enabled": true,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.showTabs": "none",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.editorAssociations": {
+    "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+    "*.db": "sqlite3-editor.optional"
+  }
+}

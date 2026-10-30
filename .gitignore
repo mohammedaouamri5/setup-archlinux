@@ -1,0 +1,4 @@
+logs/
+*.bak-*
+packages/raw-native.txt
+packages/raw-aur.txt

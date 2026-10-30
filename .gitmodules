@@ -1,0 +1,16 @@
+[submodule "submodules/hypr"]
+	path = submodules/hypr
+	url = https://github.com/mohammedaouamri5/hypr.git
+	branch = lua
+[submodule "submodules/nvim"]
+	path = submodules/nvim
+	url = https://github.com/mohammedaouamri5/nvim.git
+	branch = main
+[submodule "submodules/end4-pC"]
+	path = submodules/end4-pC
+	url = https://github.com/mohammedaouamri5/end4-pC.git
+	branch = feat/launcher
+[submodule "submodules/scripts"]
+	path = submodules/scripts
+	url = https://github.com/mohammedaouamri5/.scripts.git
+	branch = master

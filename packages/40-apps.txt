@@ -1,0 +1,24 @@
+# Daily-use applications and quality-of-life tools.
+aria2
+ghostwriter
+gpart
+gparted
+img2pdf
+lutris
+mangohud
+mpv
+mpv-mpris
+obsidian
+prometheus
+qalculate-gtk
+qbittorrent
+qemu-desktop
+qemu-system-x86
+quadrapassel
+steam
+tailscale
+umu-launcher
+wine
+wine-gecko
+wine-mono
+winetricks
