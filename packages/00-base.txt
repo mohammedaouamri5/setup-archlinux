@@ -21,6 +21,7 @@ linux-lts
 lshw
 mandoc
 mtools
+mtr
 openssh
 terminus-font
 tree

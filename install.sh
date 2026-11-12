@@ -146,8 +146,22 @@ update_submodules() {
 	fi
 }
 
-stage_configs() {
-	log_info "== stage: configs =="
+# The real collection lives in ~/wallpapers; ~/Wallpapers is a symlink kept
+# because the Quickshell config stores the capitalised path.
+ensure_wallpaper_dir() {
+	if [[ -d $HOME/Wallpapers && ! -L $HOME/Wallpapers && ! -e $HOME/wallpapers ]]; then
+		run mv "$HOME/Wallpapers" "$HOME/wallpapers"
+	elif [[ -d $HOME/Wallpapers && ! -L $HOME/Wallpapers ]]; then
+		log_warn "$HOME/Wallpapers is a real directory (expected a symlink to ~/wallpapers)"
+	fi
+	run mkdir -p "$HOME/wallpapers"
+	if [[ ! -e $HOME/Wallpapers ]]; then
+		run ln -s wallpapers "$HOME/Wallpapers"
+	fi
+	run mkdir -p "$HOME/.local/bin" "$HOME/.local/opt"
+}
+
+stage_configs() {	log_info "== stage: configs =="
 	update_submodules
 
 	local pair src dst
@@ -201,7 +215,7 @@ stage_configs() {
 		rm -f "$tmp"
 	fi
 
-	run mkdir -p "$HOME/Wallpapers" "$HOME/.local/bin" "$HOME/.local/opt"
+	ensure_wallpaper_dir
 }
 
 # ------------------------------------------------------------------ system --

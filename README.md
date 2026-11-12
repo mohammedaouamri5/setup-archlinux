@@ -7,6 +7,8 @@ Scope is **post-install**: it assumes Arch is already booting with a user and
 network. See [docs/fresh-install.md](docs/fresh-install.md) for the base install
 (archinstall, limine, NVIDIA) that has to happen first.
 
+> Decisions, intent and known issues are recorded in [AGENTS.md](AGENTS.md).
+
 ```
 ./install.sh --dry-run     # see what would change
 ./install.sh               # do it
@@ -135,8 +137,9 @@ pulls the latest upstream submodule commits before linking.
 
 The 1.3 GB collection is not in the repo. Host it and list the URLs in
 `config/wallpapers/urls.txt`; `scripts/fetch-wallpapers.sh` (part of `post`)
-downloads them into `~/Wallpapers` with `aria2c --continue`. The file ships
-with placeholder `example.com` links.
+downloads them into `~/wallpapers` with `aria2c --continue` (`~/Wallpapers` is
+kept as a symlink because the Quickshell config uses the capitalised path). The
+file ships with placeholder `example.com` links.
 
 ## Not included (on purpose)
 

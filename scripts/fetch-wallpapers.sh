@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Download the wallpapers listed in config/wallpapers/urls.txt into ~/Wallpapers.
+# Download the wallpapers listed in config/wallpapers/urls.txt into ~/wallpapers.
 #
 #   ./scripts/fetch-wallpapers.sh
 #   WALLPAPER_DIR=/mnt/data/walls ./scripts/fetch-wallpapers.sh
@@ -7,7 +7,7 @@ set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 URLS="$REPO/config/wallpapers/urls.txt"
-DEST="${WALLPAPER_DIR:-$HOME/Wallpapers}"
+DEST="${WALLPAPER_DIR:-$HOME/wallpapers}"
 
 if [[ ! -f $URLS ]]; then
 	echo "missing $URLS" >&2
