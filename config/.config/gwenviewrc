@@ -1,0 +1,23 @@
+[General]
+LastUsedVersion=210800
+SideBarPage=operations
+
+[MainWindow]
+MenuBar=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/Downloads/20261002_172743.jpg
+File2[$e]=$HOME/Downloads/20261002_172717.jpg
+File3[$e]=$HOME/Downloads/father.jpg
+File4[$e]=$HOME/DEV/animal patrol 22/out/images/frame_003630.jpg
+File5[$e]=$HOME/DEV/animal patrol 22/out/images/frame_003465.jpg
+Name1[$e]=20261002_172743.jpg
+Name2[$e]=20261002_172717.jpg
+Name3[$e]=father.jpg
+Name4[$e]=frame_003630.jpg
+Name5[$e]=frame_003465.jpg
+
+[SideBar]
+InformationSplitterSizes=219,256
+IsVisible ViewMode=true
+SideBarSplitterSizes=207,739

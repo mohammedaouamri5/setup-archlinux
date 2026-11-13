@@ -1,0 +1,207 @@
+# openSUSE package name translation.
+#
+# Left column  = canonical name used in packages/*.txt (Arch spelling)
+# Right column = openSUSE name(s), or `-` when the package does not exist there.
+# Globs are tried after exact matches, in file order.
+#
+# Best effort: missing packages warn, they only fail with --strict.
+
+# ---------------------------------------------------------------- base ------
+base -
+base-devel -
+amd-ucode ucode-amd
+linux kernel-default
+linux-lts -
+linux-firmware kernel-firmware-all
+limine -
+grub grub2
+terminus-font terminus-font
+libisoburn xorriso
+mtools mtools
+cpio cpio
+mandoc mandoc
+openssh openssh
+zram-generator zram-generator
+
+# ------------------------------------------------------------- desktop ------
+bluez-utils bluez
+breeze-cursors breeze5
+breeze-gtk breeze-gtk-theme
+breeze-plymouth -
+cups cups
+cups-filters cups-filters
+dnsmasq dnsmasq
+dunst dunst
+espeak-ng espeak-ng
+evtest evtest
+flameshot flameshot
+flatpak flatpak
+flatpak-kcm -
+gst-plugin-pipewire gstreamer-plugin-pipewire
+icewm icewm
+libpulse libpulse0
+linssid linssid
+mission-center mission-center
+noto-fonts-cjk noto-sans-cjk-fonts
+noto-fonts-emoji noto-coloremoji-fonts
+nwg-displays nwg-displays
+oxygen oxygen5
+oxygen-cursors oxygen5-cursors
+oxygen-sounds -
+pipewire pipewire
+pipewire-alsa pipewire-alsa
+pipewire-jack pipewire-jack
+plymouth-kcm -
+power-profiles-daemon power-profiles-daemon
+powertop powertop
+qrca qrca
+rofi rofi
+satty satty
+sddm sddm
+spectacle spectacle
+thunar thunar
+ttf-jetbrains-mono jetbrains-mono-fonts
+wavemon wavemon
+wev wev
+webkitgtk-6.0 -
+qt6-svg qt6-svg
+qt6-virtualkeyboard qt6-virtualkeyboard
+qt6-multimedia-ffmpeg -
+qt6-imageformats -
+
+# --------------------------------------------------------------- nvidia -----
+nvidia-open nvidia-open-driver-G06-signed-kmp-default
+nvidia-open-lts -
+nvidia-utils nvidia-video-G06
+nvidia-settings nvidia-settings
+nvidia-container-toolkit nvidia-container-toolkit
+lib32-vulkan-intel -
+vulkan-intel libvulkan_intel
+vulkan-nouveau libvulkan_nouveau
+vulkan-tools vulkan-tools
+vulkan-headers vulkan-headers
+spirv-headers spirv-headers
+volk vulkan-loader-devel
+vulkan-extra-layers vulkan-validationlayers
+vulkan-validation-layers vulkan-validationlayers
+virtualgl VirtualGL
+
+# ------------------------------------------------------------------ dev -----
+docker docker
+docker-compose docker-compose
+github-cli gh
+gopls gopls
+go-tools -
+markdownlint-cli -
+neovim neovim
+octave octave
+ollama ollama
+ollama-cuda -
+opencode -
+pandoc-cli pandoc-cli
+postgresql-docs postgresql-docs
+postgresql-libs postgresql-devel
+pyenv pyenv
+pyright -
+python-pipx python-pipx
+python-py-cpuinfo2 python-cpuinfo
+python-pygraphviz python-pygraphviz
+qt5-tools libqt5-qttools
+sqlitebrowser sqlitebrowser
+tk tk
+typescript-language-server -
+texlive-* texlive-scheme-full
+
+# ----------------------------------------------------------------- apps -----
+aria2 aria2
+ghostwriter ghostwriter
+gpart gparted
+gparted gparted
+img2pdf img2pdf
+lutris lutris
+mangohud mangohud
+mpv mpv
+mpv-mpris mpv-mpris
+obsidian -
+prometheus prometheus
+qalculate-gtk qalculate-gtk
+qbittorrent qbittorrent
+qemu-desktop qemu-desktop
+qemu-system-x86 qemu-x86
+quadrapassel quadrapassel
+steam steam
+tailscale tailscale
+umu-launcher -
+wine wine
+wine-gecko wine-gecko
+wine-mono wine-mono
+winetricks winetricks
+
+# ------------------------------------------------------------------ KDE -----
+ark ark
+discover discover
+drkonqi drkonqi
+gwenview gwenview
+kate kate
+kde-gtk-config kde-gtk-config
+kdeplasma-addons kdeplasma-addons
+kget kget
+kinfocenter kinfocenter
+konsole konsole
+krdp -
+kscreen kscreen
+ksshaskpass ksshaskpass
+kwallet-pam kwallet-pam
+kwrited -
+okular okular
+partitionmanager partitionmanager
+plasma-browser-integration plasma-browser-integration
+plasma-desktop plasma6-desktop
+plasma-disks plasma6-disks
+plasma-firewall plasma6-firewall
+plasma-keyboard -
+plasma-login-manager -
+plasma-pa plasma6-pa
+plasma-sdk plasma6-sdk
+plasma-systemmonitor plasma6-systemmonitor
+plasma-thunderbolt plasma6-thunderbolt
+plasma-vault plasma6-vault
+plasma-welcome plasma6-welcome
+plasma-workspace-wallpapers plasma6-workspace-wallpapers
+print-manager print-manager
+
+# ------------------------------------------------------------------ AUR -----
+illogical-impulse-* -
+grimblast-git -
+hyprshade -
+kwin-polonium -
+plasma-x11-session -
+wacomtablet -
+beekeeper-studio-appimage -
+brave-nightly-bin -
+bruno-bin -
+cnrdrvcups-lb-bin -
+gitkraken -
+gpt4all-chat -
+k6 k6
+kgamma -
+lmstudio-bin -
+localsend-bin -
+mongodb-bin -
+neofetch neofetch
+pachtop -
+packettracer -
+pdfcpu-bin -
+protonup-qt protonup-qt
+simulide -
+upscayl-bin -
+visual-studio-code-bin code
+yaak-appimage -
+yay-bin -
+paru-bin -
+archarchive -
+debtap -
+downgrade -
+ntfsfixboot -
+weka -
+xboxdrv xboxdrv

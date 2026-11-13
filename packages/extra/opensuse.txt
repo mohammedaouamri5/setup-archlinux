@@ -1,0 +1,25 @@
+# openSUSE-only extras: packages whose Arch/AUR equivalent has a different name
+# (or only exists natively here). Installed as optional, so missing ones warn.
+hyprland
+hyprlock
+hypridle
+hyprpaper
+hyprpicker
+hyprsunset
+quickshell
+matugen
+cliphist
+wl-clipboard
+grim
+slurp
+swappy
+kitty
+fuzzel
+dunst
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+ydotool
+wtype
+playerctl
+brightnessctl
+swww

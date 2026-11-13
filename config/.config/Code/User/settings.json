@@ -90,7 +90,7 @@
     "database-client.autoSync": true,
     "redhat.telemetry.enabled": true
   ,
-  "material-code.primaryColor": "#B94641",
+  "material-code.primaryColor": "#ACA084",
   "workbench.experimental.share.enabled": true,
   "workbench.layoutControl.enabled": false,
   "workbench.editor.showTabs": "none",

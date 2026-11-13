@@ -1,0 +1,12 @@
+[ActionPlugins][0]
+MiddleButton;NoModifier=org.kde.paste
+RightButton;NoModifier=org.kde.contextmenu
+
+[Containments][2]
+activityId=
+formfactor=4
+immutability=1
+lastScreen=-1
+location=0
+plugin=org.kde.desktopcontainment
+wallpaperplugin=org.kde.image

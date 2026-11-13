@@ -1,0 +1,208 @@
+# Fedora package name translation.
+#
+# Left column  = canonical name used in packages/*.txt (Arch spelling)
+# Right column = Fedora name(s), or `-` when the package does not exist there.
+# Globs are tried after exact matches, in file order.
+#
+# This is best effort: anything not listed is attempted with its Arch name and
+# a missing package only produces a warning (unless --strict is used).
+
+# ---------------------------------------------------------------- base ------
+base -
+base-devel @development-tools
+amd-ucode amd-ucode-firmware
+linux kernel
+linux-lts -
+linux-firmware linux-firmware
+limine -
+grub grub2
+terminus-font terminus-fonts
+libisoburn xorriso
+mtools mtools
+cpio cpio
+mandoc mandoc
+openssh openssh
+zram-generator zram-generator
+
+# ------------------------------------------------------------- desktop ------
+bluez-utils bluez
+breeze-cursors breeze-cursor-theme
+breeze-gtk breeze-gtk-theme
+breeze-plymouth -
+cups cups
+cups-filters cups-filters
+dnsmasq dnsmasq
+dunst dunst
+espeak-ng espeak-ng
+evtest evtest
+flameshot flameshot
+flatpak flatpak
+flatpak-kcm -
+gst-plugin-pipewire gstreamer1-plugin-pipewire
+icewm icewm
+libpulse pulseaudio-libs
+linssid linssid
+mission-center mission-center
+noto-fonts-cjk google-noto-sans-cjk-fonts
+noto-fonts-emoji google-noto-emoji-fonts
+nwg-displays nwg-displays
+oxygen oxygen-icon-theme
+oxygen-cursors oxygen-cursor-theme
+oxygen-sounds -
+pipewire pipewire
+pipewire-alsa pipewire-alsa
+pipewire-jack pipewire-jack-audio-connection-kit
+plymouth-kcm -
+power-profiles-daemon power-profiles-daemon
+powertop powertop
+qrca qrca
+rofi rofi
+satty satty
+sddm sddm
+spectacle spectacle
+thunar thunar
+ttf-jetbrains-mono jetbrains-mono-fonts
+wavemon wavemon
+wev wev
+webkitgtk-6.0 webkitgtk6.0
+qt6-svg qt6-qtsvg
+qt6-virtualkeyboard qt6-qtvirtualkeyboard
+qt6-multimedia-ffmpeg qt6-qtmultimedia
+qt6-imageformats qt6-qtimageformats
+
+# --------------------------------------------------------------- nvidia -----
+nvidia-open akmod-nvidia
+nvidia-open-lts -
+nvidia-utils xorg-x11-drv-nvidia-cuda
+nvidia-settings nvidia-settings
+nvidia-container-toolkit nvidia-container-toolkit
+lib32-vulkan-intel -
+vulkan-intel mesa-vulkan-drivers
+vulkan-nouveau mesa-vulkan-drivers
+vulkan-tools vulkan-tools
+vulkan-headers vulkan-headers
+spirv-headers spirv-headers
+volk vulkan-loader-devel
+vulkan-extra-layers vulkan-validation-layers
+vulkan-validation-layers vulkan-validation-layers
+virtualgl VirtualGL
+
+# ------------------------------------------------------------------ dev -----
+docker moby-engine
+docker-compose docker-compose
+github-cli gh
+gopls golang-x-tools-gopls
+go-tools golang-x-tools
+markdownlint-cli -
+neovim neovim
+octave octave
+ollama -
+ollama-cuda -
+opencode -
+pandoc-cli pandoc-cli
+postgresql-docs postgresql-docs
+postgresql-libs libpq
+pyenv pyenv
+pyright python3-pyright
+python-pipx pipx
+python-py-cpuinfo2 python3-py-cpuinfo
+python-pygraphviz python3-pygraphviz
+qt5-tools qt5-qttools
+sqlitebrowser sqlitebrowser
+tk tk
+typescript-language-server -
+texlive-* texlive-scheme-full
+
+# ----------------------------------------------------------------- apps -----
+aria2 aria2
+ghostwriter ghostwriter
+gpart gparted
+gparted gparted
+img2pdf img2pdf
+lutris lutris
+mangohud mangohud
+mpv mpv
+mpv-mpris mpv-mpris
+obsidian -
+prometheus golang-github-prometheus-prometheus
+qalculate-gtk qalculate-gtk
+qbittorrent qbittorrent
+qemu-desktop qemu-desktop
+qemu-system-x86 qemu-system-x86
+quadrapassel quadrapassel
+steam steam
+tailscale tailscale
+umu-launcher -
+wine wine
+wine-gecko wine-gecko
+wine-mono wine-mono
+winetricks winetricks
+
+# ------------------------------------------------------------------ KDE -----
+ark ark
+discover discover
+drkonqi drkonqi
+gwenview gwenview
+kate kate
+kde-gtk-config kde-gtk-config
+kdeplasma-addons kdeplasma-addons
+kget kget
+kinfocenter kinfocenter
+konsole konsole
+krdp krdp
+kscreen kscreen
+ksshaskpass ksshaskpass
+kwallet-pam kwallet-pam
+kwrited kwrited
+okular okular
+partitionmanager partitionmanager
+plasma-browser-integration plasma-browser-integration
+plasma-desktop plasma-desktop
+plasma-disks plasma-disks
+plasma-firewall plasma-firewall
+plasma-keyboard -
+plasma-login-manager -
+plasma-pa plasma-pa
+plasma-sdk plasma-sdk
+plasma-systemmonitor plasma-systemmonitor
+plasma-thunderbolt plasma-thunderbolt
+plasma-vault plasma-vault
+plasma-welcome plasma-welcome
+plasma-workspace-wallpapers plasma-workspace-wallpapers
+print-manager print-manager
+
+# ------------------------------------------------------------------ AUR -----
+illogical-impulse-* -
+grimblast-git -
+hyprshade -
+kwin-polonium -
+plasma-x11-session -
+wacomtablet -
+beekeeper-studio-appimage -
+brave-nightly-bin -
+bruno-bin -
+cnrdrvcups-lb-bin -
+gitkraken -
+gpt4all-chat -
+k6 k6
+kgamma -
+lmstudio-bin -
+localsend-bin -
+mongodb-bin -
+neofetch neofetch
+pachtop -
+packettracer -
+pdfcpu-bin -
+protonup-qt protonup-qt
+simulide -
+upscayl-bin -
+visual-studio-code-bin code
+yaak-appimage -
+yay-bin -
+paru-bin -
+archarchive -
+debtap -
+downgrade -
+ntfsfixboot -
+weka -
+xboxdrv xboxdrv

@@ -1,0 +1,31 @@
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=false
+
+[MainWindow]
+MenuBar=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/Downloads/AF_043591001063-1.pdf
+File10[$e]=$HOME/Downloads/1-s2.0-S0168169924011219-main.pdf
+File2[$e]=$HOME/Downloads/Attestation.pdf
+File3[$e]=$HOME/DEV/Charon/README.md
+File4[$e]=$HOME/Downloads/bruh/clustering2026.pdf
+File5[$e]=$HOME/Downloads/Markdown to PDF.pdf
+File6[$e]=$HOME/Downloads/fvets-12-1671186.pdf
+File7[$e]=$HOME/Downloads/FINAL_REDISPATCH_2M-ICST OK(6)_SALLES_INVERSEES.pdf
+File8[$e]=$HOME/Downloads/fvets-11-1475397.pdf
+File9[$e]=$HOME/Downloads/0301-6226_2888_2990074-7.pdf
+Name1[$e]=AF_043591001063-1.pdf
+Name10[$e]=1-s2.0-S0168169924011219-main.pdf
+Name2[$e]=Attestation.pdf
+Name3[$e]=README.md
+Name4[$e]=clustering2026.pdf
+Name5[$e]=Markdown to PDF.pdf
+Name6[$e]=fvets-12-1671186.pdf
+Name7[$e]=FINAL_REDISPATCH_2M-ICST OK(6)_SALLES_INVERSEES.pdf
+Name8[$e]=fvets-11-1475397.pdf
+Name9[$e]=0301-6226_2888_2990074-7.pdf

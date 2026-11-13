@@ -12,6 +12,7 @@ obsidian
 prometheus
 qalculate-gtk
 qbittorrent
+qbittorrent-nox
 qemu-desktop
 qemu-system-x86
 quadrapassel

@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "type": "TerminalContainer",
+    "Orientation": "Vertical",
+    "children": [
+        {
+            "type": "Terminal",
+            "command": "zsh -c \"cd '/home/mohammedaouamri/DEV/familliadelivery/back/Famillia' && docker-compose --env-file ./app.env up --build; exec zsh\""
+        },
+        {
+            "type": "Terminal",
+            "command": "zsh -c \"cd '/home/mohammedaouamri/DEV/valhalla-app' && docker-compose up --build; exec zsh\""
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+[Applets][3]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Applets][3][Configuration]
+PreloadWeight=76
+geometry=0,0,672,641
+popupHeight=400
+popupWidth=560
+
+[Applets][3][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Applets][3][Configuration][General]
+favoritesPortedToKAstats=true

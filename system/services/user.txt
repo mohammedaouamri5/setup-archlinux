@@ -1,2 +1,6 @@
 # User units (installed through the dotfiles in config/.config/systemd/user/).
+# ydotool.service ships with the ydotool package (a dependency of
+# illogical-impulse-toolkit), so it is only enabled here.
 aria2.service
+qbittorrent-nox.service
+ydotool.service

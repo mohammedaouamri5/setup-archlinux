@@ -10,6 +10,15 @@ set -euo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO"
 
+# The lists are the Arch snapshot. On Fedora/openSUSE package names are
+# translated at install time, so a package-by-package drift check would report
+# noise rather than real problems.
+if ! command -v pacman >/dev/null 2>&1; then
+	printf 'package drift check is Arch-only (this host is not Arch).\n'
+	printf 'Use: ./install.sh --dry-run --distro <fedora|opensuse> --stage packages\n'
+	exit 0
+fi
+
 NATIVE_FILES=(packages/0*.txt packages/1*.txt packages/2*.txt packages/3*.txt packages/4*.txt packages/5*.txt)
 AUR_FILE=packages/90-aur.txt
 

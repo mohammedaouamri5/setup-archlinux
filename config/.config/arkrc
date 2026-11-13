@@ -1,0 +1,16 @@
+[ExtractDialog]
+DirHistory[$e]=$HOME/DEV/,$HOME/DEV/SMIL-TP/
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[KFileDialog Settings]
+listViewIconSize=48
+
+[MainWindow]
+StatusBar=Disabled
+splitterSizes=858,90
+
+[Viewer]
+StatusBar=Disabled

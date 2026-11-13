@@ -1,5 +1,5 @@
 # System units enabled on this machine (see install.sh, stage "system").
-# Anything Arch enables by default is not listed here.
+# Units that a distro does not ship are skipped with a warning.
 NetworkManager.service
 bluetooth.service
 cups.service
@@ -9,5 +9,4 @@ ollama.service
 power-profiles-daemon.service
 sddm.service
 sshd.service
-systemd-timesyncd.service
 tailscaled.service

@@ -1,0 +1,2 @@
+[Inhibitions]
+BlockedInhibitions=/opt/brave.com/brave-nightly/brave:WebRTC has active PeerConnections,/opt/brave.com/brave-nightly/brave:Playing audio,/opt/brave.com/brave-nightly/brave:Video Wake Lock

@@ -1,0 +1,10 @@
+[Unit]
+Description=qBittorrent-nox (headless)
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/qbittorrent-nox
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

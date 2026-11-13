@@ -1,0 +1,150 @@
+# Deployment manifest.  Read by install.sh (stage configs) and by
+# scripts/capture-configs.sh, so capturing and deploying can never drift.
+#
+#   submodule   <name>   <destination relative to $HOME>
+#   link-dir    <path>                       symlink whole directory
+#   link-file   <path>                       symlink one static file
+#   copy-file   <path>                       real copy (app rewrites by rename)
+#   render-file <path>                       copy, replacing REPO_HOME with $HOME
+#   render-tmpl <template> <destination>     copy, replacing @HOME@ with $HOME
+#
+# Paths are relative to config/ on the source side and to $HOME on the target.
+# Empty/absent sources are skipped with a warning, so a partial capture is safe.
+
+# ------------------------------------------------------------- submodules ---
+submodule hypr .config/hypr
+submodule nvim .config/nvim
+submodule end4-pC .config/quickshell/end4-pC
+submodule scripts .scripts
+
+# -------------------------------------------------------- linked directories -
+link-dir .config/btop
+link-dir .config/cava
+link-dir .config/kitty
+link-dir .config/fish
+link-dir .config/foot
+link-dir .config/mpv
+link-dir .config/MangoHud
+link-dir .config/rofi
+link-dir .config/wlogout
+link-dir .config/Kvantum
+link-dir .config/qt5ct
+link-dir .config/qt6ct
+link-dir .config/fontconfig
+link-dir .config/gtk-3.0
+link-dir .config/gtk-4.0
+link-dir .config/matugen
+link-dir .config/xsettingsd
+link-dir .config/yay
+link-dir .config/illogical-impulse/translations
+link-dir .config/fuzzel
+link-dir .config/Thunar
+link-dir .config/xfce4
+link-dir .config/zshrc.d
+link-dir .config/pavucontrol-qt
+link-dir .config/neofetch
+link-dir .config/xdg-desktop-portal
+link-dir .config/fontforge
+link-dir .config/Projucer
+link-dir .config/KDE
+
+# ------------------------------------------------------------- linked files -
+link-file .zshrc
+link-file .p10k.zsh
+link-file .gitconfig
+link-file .npmrc
+link-file .gtkrc-2.0
+link-file .config/starship.toml
+link-file .config/user-dirs.dirs
+link-file .config/user-dirs.locale
+link-file .config/gtkrc
+link-file .config/code-flags.conf
+link-file .config/chrome-flags.conf
+link-file .config/thorium-flags.conf
+# User services: link the unit files individually (not the whole dir) so
+# `systemctl --user enable` writes default.target.wants/ into $HOME, not the repo.
+link-file .config/systemd/user/aria2.service
+link-file .config/systemd/user/qbittorrent-nox.service
+
+# ------------------------------------------------- copied (rewritten) files -
+copy-file .bash_logout
+copy-file .dmrc
+copy-file .zsh_favlist
+copy-file .config/mimeapps.list
+copy-file .config/kdeglobals
+copy-file .config/dolphinrc
+copy-file .config/katerc
+copy-file .config/kwinrc
+copy-file .config/kwinoutputconfig.json
+copy-file .config/kwinrulesrc
+copy-file .config/kglobalshortcutsrc
+copy-file .config/spectaclerc
+copy-file .config/darklyrc
+copy-file .config/QtProject.conf
+copy-file .config/Trolltech.conf
+copy-file .config/arkrc
+copy-file .config/baloofileinformationrc
+copy-file .config/baloofilerc
+copy-file .config/bluedevilglobalrc
+copy-file .config/discoverrc
+copy-file .config/drkonqirc
+copy-file .config/filetypesrc
+copy-file .config/gwenviewrc
+copy-file .config/kactivitymanagerdrc
+copy-file .config/kactivitymanagerd-statsrc
+copy-file .config/kate-externaltoolspluginrc
+copy-file .config/katevirc
+copy-file .config/kcminputrc
+copy-file .config/kconf_updaterc
+copy-file .config/kded5rc
+copy-file .config/kdialogrc
+copy-file .config/kgetrc
+copy-file .config/kiorc
+copy-file .config/kmenueditrc
+copy-file .config/konsolerc
+copy-file .config/konsolesshconfig
+copy-file .config/krunnerrc
+copy-file .config/ksmserverrc
+copy-file .config/ktimezonedrc
+copy-file .config/kwalletrc
+copy-file .config/kxkbrc
+copy-file .config/okularpartrc
+copy-file .config/okularrc
+copy-file .config/partitionmanagerrc
+copy-file .config/plasma-localerc
+copy-file .config/plasmanotifyrc
+copy-file .config/plasmaparc
+copy-file .config/plasmarc
+copy-file .config/plasmashellrc
+copy-file .config/plasma-welcomerc
+copy-file .config/plasmawindowedrc
+copy-file .config/plasma-org.kde.plasma.desktop-appletsrc
+copy-file .config/plasmawindowed-appletsrc
+copy-file .config/powerdevilrc
+copy-file .config/powermanagementprofilesrc
+copy-file .config/print-manager
+copy-file .config/systemmonitorrc
+copy-file .config/trashrc
+copy-file .config/xdg-desktop-portal-kderc
+copy-file .config/kde-material-you-colors/config.conf
+copy-file .config/nwg-displays/config
+copy-file .config/qalculate/qalc.cfg
+copy-file .config/qalculate/qalculate-gtk.cfg
+copy-file .config/qalculate/qalculate-qt.cfg
+copy-file .config/sqlitebrowser/sqlitebrowser.conf
+copy-file .config/swappy/config
+copy-file .config/illogical-updots/settings.json
+copy-file .config/Code/User/settings.json
+copy-file .config/Code/User/keybindings.json
+copy-file .config/qBittorrent/qBittorrent.conf
+copy-file .config/qBittorrent/categories.json
+
+# ------------------------------------------------------- rendered copies ----
+render-file .bashrc
+render-file .bash_profile
+render-file .config/illogical-impulse/config.json
+render-file .config/kde.org/ghostwriter.conf
+render-file .config/pupgui/config.ini
+render-file .config/workstart/docker-split.json
+render-file .config/workstart/dev-tabs.txt
+render-tmpl .config/aria2/aria2.conf.tmpl .config/aria2/aria2.conf

@@ -1,0 +1,2 @@
+title: hot_reload;; command: zsh -c "cd '/home/mohammedaouamri/DEV/familliadelivery/back/Famillia' && make hot_reload; exec zsh"
+title: nvim;; command: zsh -c "cd '/home/mohammedaouamri/DEV/familliadelivery/back/Famillia' && nvim .; exec zsh"

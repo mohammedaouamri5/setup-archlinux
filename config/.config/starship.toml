@@ -189,7 +189,7 @@ format = '[ $symbol ($version) ]($style)'
 
 
 [custom.time_icon]
-command = "$HOME/.scripts/TimeIcon"
+command = "~/.scripts/TimeIcon"
 when = "true"
 format = "[$output]($style)"
 style = "bg:#f92672"
